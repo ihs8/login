@@ -37,7 +37,8 @@ app.post('/login', function (req, res) {
  
                 if (result) {
                    let token = jwt.sign({name:data[0].Name},'secret', {expiresIn:'1h'})
-                   res.json({
+                   res.redirect("http://localhost:3000")
+                  /* res.json({
  
                       status:"success",
                       message:"Signin Successful",
@@ -45,14 +46,15 @@ app.post('/login', function (req, res) {
                       token
                 
  
-                   })
+                   })*/
                 }else{
-                   res.json({
+                  res.sendFile(path.join(__dirname,'../index.html')); 
+                  /* res.json({
                       status:"Failed",
                       message:"Invalid login",
                       err,
                       data
-                   })
+                   })*/
                 }
              })
  

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+    <style>
+.parent {
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+grid-template-rows: 1fr 2fr;
+grid-column-gap: 0px;
+grid-row-gap: 0px;
+}
+
+.div1 { grid-area: 1 / 1 / 2 / 2; }
+.div2 { grid-area: 2 / 1 / 3 / 2; }
+.div3 { grid-area: 1 / 2 / 3 / 3; }
+
+#im{
+  width: 100%;
+  height: 99%;
+}
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="div1 logo"><img src="logo.png" alt="Qlogestics">
+            <h1>Keep track of your goods,inventory and fleet</h1> <h5>Login</h5> </div>
+        
+        <div class="div2 inputlogin">    
+            <div class="email">
+            <label for="email">Email Address</label>
+            <div class="sec-2">
+              <ion-icon name="mail-outline"></ion-icon>
+              <input type="email" name="email" placeholder="Username@gmail.com"/>
+            </div>
+          </div>
+          <div class="password">
+            <label for="password">Password</label>
+            <div class="sec-2">
+              <ion-icon name="lock-closed-outline"></ion-icon>
+              <input class="pas" id ="myInput" type="password" name="password" placeholder="············"/>
+              <ion-icon class="show-hide" name="eye-outline" onclick="myFunction()"></ion-icon>
+            </div>
+          </div> 
+          <button type="submit" class="login">Login </button>
+            <span>Forgot Password?</span>
+        </div>
+    
+        <div class="div3 rightside"> <img id="im"  src="stock0.jpg" alt="Avatar man"> </div>
+        </div>
+</body>
+</html>

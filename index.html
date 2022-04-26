@@ -8,6 +8,9 @@ body {
   font-family: Arial;
   color: rgb(0, 0, 0);
 }
+.container{
+  display: flex;
+}
 .spliit{
   height: 100%;
   width: 60%;
@@ -29,10 +32,9 @@ body {
 
 .left {
 
-  left: 0;
-  padding-left: 5%;
-  padding-top: 3%;
-
+  left: 2px;
+ right: 1px;
+  padding: 20PX;
 }
 
 .right {
@@ -47,24 +49,147 @@ h1{
   padding-top: 7%;
 }
 
+.screen-1 {
+  background: #f1f7fe;
+  
+  display: flex;
+  flex-direction: column;
+  border-radius: 30px;
+  box-shadow: 0 0 2em #e6e9f9;
+  width:90%
+}
+.screen-1 .email {
+  background: white;
+  box-shadow: 0 0 0.5em #e6e9f9;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2em;
+  border-radius: 10px;
+  color: #4d4d4d;
+  
+
+}
+.screen-1 .email input {
+  outline: none;
+  border: none;
+}
+.screen-1 .email input::-moz-placeholder {
+  color: black;
+  font-size: 0.4em;
+}
+.screen-1 .email input:-ms-input-placeholder {
+  color: black;
+  font-size: 0.4em;
+}
+.screen-1 .email input::placeholder {
+  color: black;
+  font-size: 0.9em;
+}
+.screen-1 .email ion-icon {
+  color: #4d4d4d;
+  margin-bottom: -0.2em;
+}
+.screen-1 .password {
+  background: white;
+  box-shadow: 0 0 1em #e6e9f9;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2em;
+  border-radius: 10px;
+  color: #4d4d4d;
+
+
+}
+.screen-1 .password input {
+  outline: none;
+  border: none;
+}
+.screen-1 .password input::-moz-placeholder {
+  color: black;
+  font-size: 0.9em;
+}
+.screen-1 .password input:-ms-input-placeholder {
+  color: black;
+  font-size: 0.9em;
+}
+.screen-1 .password input::placeholder {
+  color: black;
+  font-size: 0.9em;
+}
+.screen-1 .password ion-icon {
+  color: #4d4d4d;
+  margin-bottom: -0.2em;
+}
+.screen-1 .password .show-hide {
+  margin-right: 1em;
+}
+.screen-1 .login {
+  padding: 1em;
+  background: #09c18d;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-weight: 600;
+  width: 100px;
+
+}
+.footer{
+  display: flex;
+  justify-content: space-between;
+}
+.inputData{
+  display: flex;
+  gap: 3;  
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
 </style>
 </head>
 <body>
+<div class="container">
+    <div class="spliit left">
+        <img src="logo.png" alt="Avatar woman">
+        <h1>Keep track of your goods,inventory and fleet</h1>
+        <form action="http://localhost:5010/login" method="post">
+          <div class="screen-1">
+          <table cellspacing="30px" style="width: 80%;">
+            <tr>
+              <td><label for="email">Email Address</label> </td>
+              <td> <label for="password">Password</label></td>
+            </tr>
+            <tr>
+              <td><div class="email">
+                <label for="email">Email Address</label>
+                <div class="sec-2">
+                  <ion-icon name="mail-outline"></ion-icon>
+                  <input type="email" name="email" placeholder="Username@gmail.com"/>
+                </div>
+              </div></td>
+              <td><div class="password">
+                <label for="password">Password</label>
+                <div class="sec-2">
+                  <ion-icon name="lock-closed-outline"></ion-icon>
+                  <input class="pas" id ="myInput" type="password" name="password" placeholder="············"/>
+                  <ion-icon class="show-hide" name="eye-outline" onclick="myFunction()"></ion-icon>
+                </div>
+              </div></td>
+            </tr>
+          </table>
+            <div class="footer"> 
+              <div><button type="submit" class="login">Login </button></div>
+              <div><span>Forgot Password?</span></div>
+            </div>
+          </div></form>
+      </div>
 
-<div class="spliit left">
-    <img src="logo.png" alt="Avatar woman">
-    <h1>Keep track of your goods,inventory and fleet</h1>
-    <span>create an account to setup your account in a few clicks</span>
-  </div>
- 
+    <div class="split right">
+        <img id="im"  src="stock0.jpg" alt="Avatar man">
+
+      </div>
+
 </div>
-
-<div class="split right">
-    <img id="im"  src="stock0.jpg" alt="Avatar man">
-
-  </div>
-
-</div>
-     
 </body>
 </html> 
